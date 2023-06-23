@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <h1>Gestion de Accesos</h1>
+    <br>
+    <br>
+    <h2>Area de Registro</h2>
+    <br>
+    <input type="text"  id="registrour" placeholder="coloca tu email aqui">
+    <input type="password"  id="registrovar" placeholder="coloca tu contraseña aqui">
+    <button>Registrar</button>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBuQfhwDObV4Z-nqwv9Bi4LijuQ7z2dk7w",
+          authDomain: "ciberpe-5f0cd.firebaseapp.com",
+          projectId: "ciberpe-5f0cd",
+          storageBucket: "ciberpe-5f0cd.appspot.com",
+          messagingSenderId: "1094933241613",
+          appId: "1:1094933241613:web:c45fdbaf924259cd33da44"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+
+        var UsuarioRegistro = document.getElementById("registrour").value;
+
+
+        createUserWithEmailAndPassword(auth, pieroriveros97gmail.com, Pierito2025)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+        });
+      </script>
+</body>
+</html>
